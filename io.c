@@ -34,7 +34,7 @@
 #include "io.h"
 
 /* Number of colors defined in io.h */
-#define NUM_COLORS	8
+#define NUM_COLORS	9
 
 /* Number of attributes defined in io.h */
 #define NUM_ATTRS	9
@@ -74,6 +74,8 @@ void io_init ()
    out_attr = A_NORMAL;
    out_color = COLOR_WHITE;
    noecho ();
+   /* Init colours */ /* TODO: Properly handle colours */
+   init_color(COLOR_SHADOW, 500, 500, 500);
    /* Map colors */
    color_map[COLOR_BLACK] = COLOR_BLACK;
    color_map[COLOR_RED] = COLOR_RED;
@@ -83,6 +85,7 @@ void io_init ()
    color_map[COLOR_MAGENTA] = COLOR_MAGENTA;
    color_map[COLOR_CYAN] = COLOR_CYAN;
    color_map[COLOR_WHITE] = COLOR_WHITE;
+   color_map[COLOR_SHADOW] = COLOR_SHADOW;
    /* Map attributes */
    attr_map[ATTR_OFF] = A_NORMAL;
    attr_map[ATTR_BOLD] = A_BOLD;

@@ -44,6 +44,7 @@
 #define COLOR_MAGENTA   5                        /* Magenta */
 #define COLOR_CYAN      6                        /* Cyan */
 #define COLOR_WHITE     7                        /* White */
+#define COLOR_SHADOW    8
 
 /*
  * Attributes
